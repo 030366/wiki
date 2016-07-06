@@ -7,7 +7,7 @@ $where = array(
                                     'alias' => 'alias_tabla',
                                     'type' => 'INNER',
                                     'conditions' => array(
-                                        'alias_tabla.id = tabla_join_original.aliastabla_id'
+                                    'alias_tabla.id = tabla_join_original.aliastabla_id'
                                     )
                                 ),
                             ),
