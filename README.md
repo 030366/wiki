@@ -14,3 +14,9 @@ $where = array('joins' => array(
                                   'conditions'=>array( $condicion ), 
                                   'order' => '', 'limit'=>100 );
 $this->Modelo->recursive = 0; $this->paginate = $where; $this->set('variable_modelo', $this->Paginator->paginate());
+
+/*************** Funcion para cambiar formato de fechas *************************/
+function format_fecha($fecha){
+  $date = new DateTime($fecha);
+  return $date->format('d/m/Y');
+}
