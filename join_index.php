@@ -23,8 +23,11 @@ $where = array(
                             ),
                             'order' => '',
                             'limit'=>100
-                        );                
+                        );    
+                //ejecuta el SELECT * con los joins definidos en el crud de una clase X        
                 $this->Modelo->recursive = 0;
+                //en objeto paginador añadimos el where que definimos anteriormente
                 $this->paginate = $where;
+                //seteamos la variable a devolver a la vista index.ctp
 		$this->set('variable_modelo', $this->Paginator->paginate());
 ?>
